@@ -25,7 +25,7 @@ const STEPS = [
   { id: 'body', title: 'Your body stats', subtitle: 'Weight and height refine your daily water goal' },
   { id: 'gender', title: 'How do you identify?', subtitle: 'This helps tailor your recommendations' },
   { id: 'location', title: 'Where are you based?', subtitle: 'Climate affects how much water you need' },
-  { id: 'summary', title: "You're all set!", subtitle: 'Here's your personalized hydration plan' },
+  { id: 'summary', title: "You're all set!", subtitle: "Here's your personalized hydration plan" },
 ];
 
 const WelcomeStep = () => (

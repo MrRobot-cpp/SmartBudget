@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import { COLORS } from '../constants/colors';
 import { useApp } from '../context/AppContext';
@@ -13,7 +13,7 @@ import StreakScreen from '../screens/StreakScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 
 const Tab = createBottomTabNavigator();
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
 const TabIcon = ({ emoji, label, focused }) => (
   <View style={[tabStyles.iconWrap, focused && tabStyles.iconWrapActive]}>
@@ -59,7 +59,7 @@ const AppNavigator = () => {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: false, animationEnabled: true }}>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
         {!isOnboarded ? (
           <Stack.Screen name="Onboarding" component={OnboardingScreen} />
         ) : (
